@@ -6,9 +6,11 @@ Created on Thu Nov 19 18:31:10 2016
 
 @author: selva
 """
+import logging
 
 
-def kill_people(total, killing_position, start=0, kill_direction='r'):
+def kill_people(total=10, killing_position=2, start=0, kill_direction='r'):
+
     """
     Method kill people in josephus problem
     :param total: 
@@ -17,6 +19,7 @@ def kill_people(total, killing_position, start=0, kill_direction='r'):
     :param kill_direction: 
     :return: 
     """
+    log = logging.getLogger(__name__)
     people = total
     killing_position = int(killing_position)
     people = range(1, int(people))
@@ -29,6 +32,6 @@ def kill_people(total, killing_position, start=0, kill_direction='r'):
     while len(people_list) > 1:
         del people_list[index]
         index = (index + killing_position) % len(people_list)
-        print(people_list)
+        log.info(people_list)
     return people_list[0]
 

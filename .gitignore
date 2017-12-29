@@ -2,3 +2,5 @@
 /Python_Problems.iml
 /.idea/
 /.cache/
+*__pycache__*
+/st.py
