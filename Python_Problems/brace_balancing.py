@@ -4,7 +4,7 @@ def braces(strings):
     stack=[]
     print(strings)
     balance_flag=False
-    pushChars,popChars='{[(','}])'
+    pushChars , popChars='{[(','}])'
     for item in strings:
         for s in item:
             if s in pushChars:
